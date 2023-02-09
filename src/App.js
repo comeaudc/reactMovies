@@ -2,9 +2,10 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Form from './components/Form';
 import MovieDisplay from './components/MovieDisplay';
+require('dotenv').config();
 
 function App() {
-  const apiKey = 'c9cfdcec';
+  const apiKey = process.env.apiKey;
 
   const [movie, setMovie] = useState(null);
 
