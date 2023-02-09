@@ -10,10 +10,10 @@ function App() {
 
   const getMovie = async (searchTerm) => {
     try {
-      const resonse = await fetch(
+      const res = await fetch(
         `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
       );
-      const data = await resonse.json();
+      const data = await res.json();
 
       setMovie(data);
     } catch (err) {
